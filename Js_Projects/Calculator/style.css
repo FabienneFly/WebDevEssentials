@@ -34,3 +34,13 @@
 .special {
   background-color: rgba(255, 255, 255, 0.6);
 }
+
+.grid-item:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.equals:hover {
+  background-color: rgba(255, 153, 94, 0.7);
+}
+.outputfield:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
