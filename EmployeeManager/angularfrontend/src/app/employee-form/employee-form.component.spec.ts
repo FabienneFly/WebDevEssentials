@@ -10,8 +10,8 @@ describe('EmployeeFormComponent', () => {
     await TestBed.configureTestingModule({
       imports: [EmployeeFormComponent]
     })
-    .compileComponents();
-    
+      .compileComponents();
+
     fixture = TestBed.createComponent(EmployeeFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

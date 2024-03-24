@@ -1,6 +1,6 @@
 <div class="card my-5">
   <div class="card-body">
-    <form (ngSubmit)="onSubmit()" #employeeForm="ngForm">
+    <form (ngSubmit)="addEmployee()" #employeeForm="ngForm">
       <div class="form-group">
         <label for="name">Name</label>
         <input
@@ -15,7 +15,7 @@
         />
       </div>
       <div class="form-group">
-        <label for="name">Job Title</label>
+        <label for="jobTitle">Job Title</label>
         <input
           type="text"
           [(ngModel)]="employee.jobTitle"
@@ -28,20 +28,7 @@
         />
       </div>
       <div class="form-group">
-        <label for="name">Phone</label>
-        <input
-          type="text"
-          [(ngModel)]="employee.phone"
-          class="form-control"
-          id="phone"
-          name="phone"
-          placeholder="Enter your phone number ;)"
-          required
-          #name="ngModel"
-        />
-      </div>
-      <div class="form-group">
-        <label for="name">Phone</label>
+        <label for="phone">Phone</label>
         <input
           type="text"
           [(ngModel)]="employee.phone"
@@ -57,7 +44,7 @@
       <div class="form-group">
         <label for="email">Email</label>
         <input
-          type="text"
+          type="email"
           [(ngModel)]="employee.email"
           class="form-control"
           id="email"
@@ -70,11 +57,10 @@
       </div>
       <button
         type="submit"
-        [disabled]="employeeForm.form.valid"
         class="btn btn-info"
       >
         Submit
-      </button>
+      </button> 
     </form>
   </div>
 </div>

@@ -7,8 +7,10 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "Employees")
 public class Employee implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,7 +27,7 @@ public class Employee implements Serializable {
 
     }
 
-    public Employee(Long id, String name, String email, String jobTitle, String phone, String Url,
+    public Employee(Long id, String name, String email, String jobTitle, String phone,
             String employeeCode) {
         this.id = id;
         this.name = name;

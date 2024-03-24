@@ -28,9 +28,12 @@ public class EmployeeResource {
 
     @GetMapping("/all")
     public ResponseEntity<List<Employee>> getAllEmployees() {
-        List<Employee> employees = employeeService.findAllEmployees();
-        return new ResponseEntity<>(employees, HttpStatus.OK);
-
+        try {
+            List<Employee> employees = employeeService.findAllEmployees();
+            return new ResponseEntity<List<Employee>>(employees, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     @GetMapping("/find/{id}")
