@@ -1,17 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Employee } from './employee';
 import { EmployeeService } from './employee.service';
-import { HttpErrorResponse } from '@angular/common/http';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpErrorResponse, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, HttpClientModule],
+  imports: [RouterOutlet, CommonModule, HttpClientModule, RouterLink, RouterLinkActive],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 
 export class AppComponent implements OnInit {
@@ -55,5 +54,5 @@ export class AppComponent implements OnInit {
     container?.appendChild(button);
     button.click();
   }
- 
+
 }

@@ -28,7 +28,7 @@ export class EmployeeFormComponent {
     this.employeeService.addEmployees(this.employee).subscribe(result => this.gotoEmployeeList());
   }
   gotoEmployeeList() {
-    this.router.navigate(['/employee/all']);
+    this.router.navigate(['/all']);
   }
 
 }
