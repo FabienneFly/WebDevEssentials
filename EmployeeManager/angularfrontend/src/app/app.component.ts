@@ -14,7 +14,7 @@ import { HttpErrorResponse, HttpClientModule } from '@angular/common/http';
 })
 
 export class AppComponent implements OnInit {
-  title = 'employeemanagerapp';
+  title = 'Employee Manager App';
 
   public employees: Employee[] = [];
 
