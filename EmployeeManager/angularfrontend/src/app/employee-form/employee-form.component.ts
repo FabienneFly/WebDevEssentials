@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Employee } from '../employee';
 import { EmployeeService } from '../employee.service';
@@ -15,6 +15,7 @@ export class EmployeeFormComponent {
 
   employee!: Employee;
 
+
   constructor(
     private route: ActivatedRoute,
     private router: Router,
@@ -24,7 +25,7 @@ export class EmployeeFormComponent {
 
 
   onSubmit() {
-    this.employeeService.save(this.employee).subscribe(result => this.gotoEmployeeList());
+    this.employeeService.addEmployees(this.employee).subscribe(result => this.gotoEmployeeList());
   }
   gotoEmployeeList() {
     this.router.navigate(['/employee/all']);
