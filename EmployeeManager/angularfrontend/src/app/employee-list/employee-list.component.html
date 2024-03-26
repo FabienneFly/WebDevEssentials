@@ -7,6 +7,7 @@
           <th scope="col">Name</th>
           <th scope="col">Email</th>
           <th scope="col">Job Title</th>
+          <th scope="col" style="color: darkred">x</th>
         </tr>
       </thead>
       <tbody>
@@ -17,6 +18,9 @@
             <a href="mailto:{{ employee.email }}">{{ employee.email }}</a>
           </td>
           <td>{{ employee.jobTitle }}</td>
+          <td>
+            <button (click)="deleteEmployee(employee.id!)" style="color: darkred">x</button>
+          </td>
         </tr>
       </tbody>
     </table>
