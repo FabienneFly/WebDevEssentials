@@ -24,7 +24,7 @@ export class EmployeeFormComponent {
 
 
   addEmployee() {
-    this.employeeService.addEmployees(this.employee).subscribe(result => this.gotoEmployeeList());
+    this.employeeService.addEmployee(this.employee).subscribe(result => this.gotoEmployeeList());
   }
 
   gotoEmployeeList() {
